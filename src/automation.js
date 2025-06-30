@@ -18,7 +18,7 @@ app.post(
     };
 
     try {
-      const command = new StopInstancesCommand(params);
+      const command = new StartInstancesCommand(params);
       const response = await client.send(command);
       console.log(`Successfully sent request to start instance: ${instanceId}`);
       return res.status(200).send("done")
