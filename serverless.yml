@@ -42,6 +42,12 @@ provider:
             - 'arn:aws:execute-api:us-east-1:121958812372:*/prod/@connections/*'
 
 functions:
+  automation:
+    handler: src/automation.startEc2Instance
+    events:
+      - httpApi:
+          path: /api/startEc2Instance
+          method: post
   pathApi:
     handler: src/index.pathsHandler
     events:
