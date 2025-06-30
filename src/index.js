@@ -21,7 +21,7 @@ app.post("/api/leads", async (req, res, next) => {
   // await putItem("crud-test", { id: req.body.id, id_sort: req.body.id, key1: req.body.key1 });
   await addValue(`${req.body.id}`, req.body.key1);
   return res.status(201).json({
-    message: "done"
+    message: "value stored"
   });
 });
 
