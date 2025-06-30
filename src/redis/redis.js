@@ -18,7 +18,7 @@ client.on('error', (err) => {
 });
 
 client.on('connect', () => {
-  console.error('[ioredis] Connected:');
+  console.error('[ioredis] Connected:')
 });
 
 const addValue = async (key, value) => {
